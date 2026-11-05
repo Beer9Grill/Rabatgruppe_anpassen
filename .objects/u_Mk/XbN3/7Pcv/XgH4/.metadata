@@ -1,0 +1,13 @@
+﻿{
+  "Name": "ET-Stammdaten",
+  "Type": "Element",
+  "Id": "XgH4YdxuhEGLxLYfN8bmnQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/XgH4YdxuhEGLxLYfN8bmnQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T11:33:24.3004795Z",
+  "Updated": "2026-07-02T11:33:24.3004795Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

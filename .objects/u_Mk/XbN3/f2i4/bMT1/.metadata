@@ -1,0 +1,14 @@
+﻿{
+  "Name": "&Löschen",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "bMT14c5Ac0OlOiSyawQu4Q",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/bMT14c5Ac0OlOiSyawQu4Q",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/f2i4tvpBlEq_CcW2AVkGMQ",
+  "Created": "2026-09-24T08:14:08.6056049Z",
+  "Updated": "2026-09-24T08:14:08.6056049Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

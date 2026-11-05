@@ -1,0 +1,20 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "65fc0c0e-a406-47e0-bfe5-5c00e3fae40e",
+      "type": "process",
+      "output": {
+        "type": "object",
+        "properties": {
+          "Altfruppe_count": {
+            "type": "integer",
+            "minimum": -2147483648,
+            "maximum": 2147483647
+          }
+        }
+      }
+    }
+  ]
+}

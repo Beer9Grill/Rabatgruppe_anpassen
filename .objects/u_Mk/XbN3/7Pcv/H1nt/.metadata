@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Rabattgruppen(1)",
+  "Type": "Element",
+  "Id": "H1ntYxaEdUuVOS9Lx6ZAwg",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/H1ntYxaEdUuVOS9Lx6ZAwg",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-30T09:52:44.3860975Z",
+  "Updated": "2026-07-30T09:52:44.3860975Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "CROSS Service(1)",
+  "Type": "Screen",
+  "Id": "7PcvrTLG60eYow-95C2zag",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/XbN3MLizbEyQIFs7yaWIFQ",
+  "Created": "2026-07-02T11:31:52.0601673Z",
+  "Updated": "2026-07-02T11:31:52.0601673Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

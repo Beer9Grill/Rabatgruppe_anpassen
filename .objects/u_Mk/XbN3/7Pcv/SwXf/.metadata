@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Handelsspanne",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "SwXfaVP52Eu7M0lv4lyFxQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/SwXfaVP52Eu7M0lv4lyFxQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T12:15:07.8236043Z",
+  "Updated": "2026-07-02T12:15:07.8236043Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

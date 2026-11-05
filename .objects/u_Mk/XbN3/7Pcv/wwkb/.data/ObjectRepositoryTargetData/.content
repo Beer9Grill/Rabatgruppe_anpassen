@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="FfM5KDsf1Em6mu0H32SJLw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="70, 64, 117, 15" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='65535' title='Wollen Sie speichern?' /&gt;" Guid="85743c1a-935f-49b2-9e1f-b1a8e4c03e42" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="ae09dbde71e5c20e454cb5ec394db285.jpg" xmlns="">0F9Trzx6kL0GjTuh5dY5epQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

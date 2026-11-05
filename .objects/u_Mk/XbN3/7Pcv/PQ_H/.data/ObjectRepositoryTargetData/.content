@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="iSmtvyrR8EikS5isGiEgFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="24, 3, 2544, 28" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl role='title bar' /&gt;" Guid="7f3ac082-1c27-4afc-93be-5a58aea87455" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='68730  CROSS Service - 68730 KD (68730) Gelder &amp;amp; Sorg GmbH &amp;amp; Co.*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="8e6062b7260a205895bd994b6cf2f1c4.jpg" xmlns="">0vVKde55dVUK6oxGHRxtfMQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "betriebsinterner Kunde",
+  "Type": "Element",
+  "Id": "DbuymaKNr0-cabAfmhvR3A",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/DbuymaKNr0-cabAfmhvR3A",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T12:31:43.4985894Z",
+  "Updated": "2026-07-02T12:31:43.4985894Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

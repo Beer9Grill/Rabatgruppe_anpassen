@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Rückfrage",
+  "Type": "Element",
+  "Id": "sEWaUg0qI0KmShRIbDuSLQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/sEWaUg0qI0KmShRIbDuSLQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-09-25T12:17:10.9206943Z",
+  "Updated": "2026-09-25T12:17:10.9206943Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

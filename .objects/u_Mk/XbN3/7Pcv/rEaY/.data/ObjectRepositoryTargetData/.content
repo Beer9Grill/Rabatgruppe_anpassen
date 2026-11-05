@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YE-emmIsFEay3YfpzG9_Sw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="113, 103, 180, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1034' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="fca5ca02-b104-4f3a-8e85-b4e413973c53" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="22, 107, 84, 13" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1035' title='Bezeichnung:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Bezeichnung:' /&gt;" Guid="49b1988a-ce32-456e-96a0-7b86e98267d1" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d8a4302f38264095651b6ec2d7dd883c.jpg" xmlns="">0hfuxW1MVgUuywm_QVmpMFA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

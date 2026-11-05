@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Arbeitsbereich wechseln",
+  "Type": "Element",
+  "Id": "MNWYOfXY-kSdyWcpIkgTwg",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/MNWYOfXY-kSdyWcpIkgTwg",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/X5Sp__JrFkGukIGa8gXAzQ",
+  "Created": "2026-07-01T11:29:25.3782701Z",
+  "Updated": "2026-07-01T11:29:25.3782701Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

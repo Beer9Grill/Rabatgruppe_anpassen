@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vEtGfa-cyEKellf1y_0tSg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 192, 15" ElementType="List" ElementVisibilityArgument="Interactive" Guid="e7026e62-fb39-4ff3-9f3b-49d6f2df5b30" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0b7de07da8acbf0f9f365a38e381741f.jpg" xmlns="">0buK_IzKzXkC2wOK3SnvwHw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

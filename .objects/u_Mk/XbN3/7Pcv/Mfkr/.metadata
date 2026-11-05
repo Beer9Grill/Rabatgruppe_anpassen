@@ -1,0 +1,14 @@
+﻿{
+  "Name": "D&etail",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "MfkrdMn_pki6-GMm15xLTA",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/MfkrdMn_pki6-GMm15xLTA",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T11:48:21.8052166Z",
+  "Updated": "2026-07-02T11:48:21.8052166Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

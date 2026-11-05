@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Rabattsatz",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "8tVEr2tFekmaOIRgVUGFbA",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/8tVEr2tFekmaOIRgVUGFbA",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T12:35:21.0240928Z",
+  "Updated": "2026-07-02T12:35:21.0240928Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

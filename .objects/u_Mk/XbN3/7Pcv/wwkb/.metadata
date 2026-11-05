@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Wollen Sie speichern",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "wwkbmFfec0ebDvNE66rGBQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/wwkbmFfec0ebDvNE66rGBQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-03T07:32:51.7780802Z",
+  "Updated": "2026-07-03T07:32:51.7780802Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ZBrYcagr8kWsGklghrvO1g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="149, 44, 192, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1046' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="012ff263-1735-481b-8ae8-d288a53a59b6" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="20, 49, 126, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1047' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' title='Abnehmergruppe:' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Abnehmergruppe:' /&gt;" Guid="e6157175-27bd-4324-a3ad-c54fcf09f6ed" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="da5cd56b80ecc1a2c11d9311cad9f09f.jpg" xmlns="">0hoG9enlfYUiiuCJ-dxaIaQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

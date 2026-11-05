@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="r226sAg1VkOFDZ9cFoCKYg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="811, 63, 17, 245" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='50' /&gt;&lt;ctrl automationid='NonClientVerticalScrollBar' /&gt;&lt;ctrl automationid='ScrollbarThumb' /&gt;" Guid="765f4d66-16ae-4c71-8dca-e13812993916" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="3916514a2b524c3d28a8567fa0a65805.jpg" xmlns="">09-PF1mk7-UOxHkkKzxkRbQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">MouseScroll</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

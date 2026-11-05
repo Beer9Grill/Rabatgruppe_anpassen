@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="q9ANTSMiM06UG1R9u8YS_A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="811, 707, 17, 17" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='50' /&gt;&lt;ctrl automationid='NonClientVerticalScrollBar' /&gt;&lt;ctrl automationid='DownButton' name='Bildlauf nach unten' role='push button' /&gt;" Guid="673d1374-4225-4544-8036-5787579e2f7e" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="603c8999ef61b0a5d15b48f8b8350ec3.jpg" xmlns="">0UyyJin54N0iYaeVwUYMRdg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

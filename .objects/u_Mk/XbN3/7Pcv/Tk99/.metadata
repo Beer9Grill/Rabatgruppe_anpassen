@@ -1,0 +1,14 @@
+﻿{
+  "Name": "UPE-Aufschlag",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "Tk99aK3XI0qMcS5zp1N7mA",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/Tk99aK3XI0qMcS5zp1N7mA",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T12:34:11.2116905Z",
+  "Updated": "2026-07-02T12:34:11.2116905Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

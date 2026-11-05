@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Auftrag",
+  "Type": "Element",
+  "Id": "Ia2MTnNJqECFchib_IBhlA",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/Ia2MTnNJqECFchib_IBhlA",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/X5Sp__JrFkGukIGa8gXAzQ",
+  "Created": "2026-07-01T11:28:28.4758597Z",
+  "Updated": "2026-07-01T11:28:28.4758597Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "C-ŠKODA",
+  "Type": "Element",
+  "Id": "VOReRWBtt0KuFZO-SD9F0Q",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/VOReRWBtt0KuFZO-SD9F0Q",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T12:13:50.4335675Z",
+  "Updated": "2026-07-02T12:13:50.4335675Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

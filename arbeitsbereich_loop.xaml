@@ -1,0 +1,297 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="arbeitsbereich_loop" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Altgrupe_count" Type="InArgument(x:Int32)" />
+    <x:Property Name="inOut_fileJson" Type="InOutArgument(njl:JObject)" />
+    <x:Property Name="in_fileName" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_Rabattgruppen" Type="InArgument(njl:JObject)" />
+    <x:Property Name="in_Betriebe" Type="InArgument(njl:JToken)" />
+    <x:Property Name="betrieb" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>arbeitsbereich_loop_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="arbeitsbereich_loop" sap:VirtualizedContainerService.HintSize="1218,3503" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="betrieb_count" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="550,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[betrieb_count]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each curBetrieb" sap:VirtualizedContainerService.HintSize="550,3305" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Betriebe]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="njl:JToken">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="njl:JToken" Name="curBetrieb" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="548,3183" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="bearbeitungsStatus" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="514,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[betrieb]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[curBetrieb("Betrieb").tostring]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[bearbeitungsStatus]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[DirectCast(curBetrieb, Newtonsoft.Json.Linq.JObject)("Status").ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="514,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Cur Betrieb: &quot; + betrieb + &quot; Status: &quot; + bearbeitungsStatus]" />
+            <If Condition="[bearbeitungsStatus = &quot;open&quot;]" DisplayName="if arbeitsgruppe schon aktualisiert" sap:VirtualizedContainerService.HintSize="514,648" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Navigiere zum &quot; + betrieb]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,283" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Betrieb &quot; + betrieb + &quot; wurde bereits aktualisiert... gehe zum nächsten&quot;]" />
+                  <ui:Continue sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                </Sequence>
+              </If.Else>
+            </If>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="CROSS Service" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="514,2120" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d95c7487-6c52-4913-813f-f087143998c7" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="512,1873" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Auftrag'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478,194" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d95c7487-6c52-4913-813f-f087143998c7" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="QWypjePrc0Gg426sYpmVuQ" DesignTimeRectangle="8, 31, 54, 19" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Anwendungsmenü' role='menu bar' /&gt;&lt;ctrl name='Auftrag' role='menu item' /&gt;" Guid="638e86f4-2f13-435c-b207-f92092970c2f" InformativeScreenshot="afd65a92d54896ff799a9f337ae73b3e.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/Ia2MTnNJqECFchib_IBhlA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='*CROSS Service*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Benutzer'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d95c7487-6c52-4913-813f-f087143998c7" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="JraoG8D7hUu23s-XCARjkg" DesignTimeRectangle="3, 391, 349, 22" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Auftrag' role='popup menu' /&gt;&lt;ctrl name='Benutzer' role='menu item' /&gt;" Guid="c40d1317-7afa-47df-8037-e5893de0c4a1" InformativeScreenshot="f1da39826669ba7f8119aaa2b8a6dab3.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/Xejlw0XrzUelYClDvxCZNw" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Arbeitsbereich wechseln'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478,194" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d95c7487-6c52-4913-813f-f087143998c7" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="2bhRqiycP0uxfVkp4M3GsQ" DesignTimeRectangle="3, 25, 220, 22" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Benutzer' role='popup menu' /&gt;&lt;ctrl automationid='17506' /&gt;" Guid="02e1d8a9-6a95-4591-8a9b-9d60c96467df" InformativeScreenshot="d0a06fa82600c91de0cc3753ef3a0581.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/MNWYOfXY-kSdyWcpIkgTwg" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="go to Betrieb" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478,194" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d95c7487-6c52-4913-813f-f087143998c7" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="16n28Wzv0UKPVa2l9y0GQA" DesignTimeRectangle="21, 68, 295, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;wnd ctrlid='8092' /&gt;&lt;ctrl name='KD (&quot;+betrieb+&quot;*)' role='list item' /&gt;&quot;]" Guid="bd3a0b1f-148d-458e-820a-f2394be1b627" InformativeScreenshot="47b867140dbc77264ad3109d6ad5def9.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/xhC1dgnGR0yzDJXCAUcYvA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Liste von Arbeitsbereichen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Übernehmen'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="478,194" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d95c7487-6c52-4913-813f-f087143998c7" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="1J1qelwMOEqvjTATQKKmfw" DesignTimeRectangle="19, 372, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='100' title='&amp;amp;Übernehmen' /&gt;" Guid="fe2a116b-8adf-41bd-9831-918c7d570002" InformativeScreenshot="9fddf2e2997980973bc74c06156754bc.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/Sq2Nk01kSU6Oiggm232C6Q" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Liste von Arbeitsbereichen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="rabatt_gruppe_anpassen - Invoke Workflow File (rabatt_gruppe_anpassen.xaml)" sap:VirtualizedContainerService.HintSize="478,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="rabatt_gruppe_anpassen.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_curBetrieb">[betrieb]</InArgument>
+                        <InOutArgument x:TypeArguments="njl:JObject" x:Key="inOut_fileJson">[inOut_fileJson]</InOutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_fileName">[in_fileName]</InArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                    <Assign sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="njl:JToken">[inOut_fileJson("Altgruppen")(Altgrupe_count)("Betriebe")(betrieb_count)("Status")]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="njl:JToken">["closed"]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;Set &quot; + betrieb + &quot; Status: &quot; + inOut_fileJson(&quot;Altgruppen&quot;)(Altgrupe_count)(&quot;Betriebe&quot;)(betrieb_count)(&quot;Status&quot;).ToString()]" />
+                    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" FileName="C:/UiPath/anpassung_Rabattsgruppe_inCROSS/excel/config.json" sap:VirtualizedContainerService.HintSize="478,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[inOut_fileJson.tostring()]" />
+                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478,140" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+                      <ui:MultipleAssign.AssignOperations>
+                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                            <ui:AssignOperation.To>
+                              <OutArgument x:TypeArguments="x:Int32">[betrieb_count]</OutArgument>
+                            </ui:AssignOperation.To>
+                            <ui:AssignOperation.Value>
+                              <InArgument x:TypeArguments="x:Int32">[betrieb_count +1]</InArgument>
+                            </ui:AssignOperation.Value>
+                          </ui:AssignOperation>
+                        </scg:List>
+                      </ui:MultipleAssign.AssignOperations>
+                    </ui:MultipleAssign>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                </ActivityFunc>
+              </uix:NApplicationCard.OCREngine>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1936, 1048" ContentHash="85puPl7lsUSZhHrPT1ZfGQ" FilePath="C:\cross2\bin\twe.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVFhHxZc9TwJBEIYp/AkmGi1NiNZqtCfaixbEivAD/OrRBEulsIUKK7Szwk6MAQoLTSTxq9BAYYIFuVhYWKx51sxmOUH5OO4mmXA3uzPvs7NDAqFSuaIeHp8CcbRDPNhWLpW112p1E6tWqzrmOE7LXuzztaZeUofa388KJt4uh5p2bbQNAAnT4Rm1FFlWqytramJsUscw3omznj5I69hX01F30bi6T2xq4fpRRl2NhvXzSf5U7yWPTwQLhfNfMQPAC0ESbVohJQlygcRuIlH1lsub/djHbVXH2S+1EMYAF3jpjAHIZrIqEU+0FLNNACiwMLeomsWSup6NuLdpoyvscx9IOsCaXIsBsOnamVwJ4nSB+6blbmMenneS+hlB8siRTnIIuQLqGABIWehkrMkcYO0AmAnaz6c9wHTWPjW2m9zTMQPAIqRbG9tmI1D2EEIPAInc/cXIuAbhOjh1ZWpezwAmA0wtcrli6suVCFTLtwBqabW02z2EMqw8I8occGpcxAVe6pALiMyAHWsB8NsajUZwAMXipUql9oMBQDwWWw8GQMQDAbDFfQdwi/sK0E7cN4BO4r4A/CU+dID/xIcK0I340AC6FR8KQC/ingP0Ku4pQD/ingH0K+4JwCDiAwMMKj4QgBfieF8AXonjPQN4KY73BMAPSBK89Fzu+Acg6L/n36OUJbyvZzymAAAAAElFTkSuQmCC" InformativeScreenshot="34f51aa5679356d1740df61835c3a9cb.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/X5Sp__JrFkGukIGa8gXAzQ" Selector="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='*CROSS Service*' /&gt;" Version="V2">
+                  <uix:TargetApp.Arguments>
+                    <InArgument x:TypeArguments="x:String" />
+                  </uix:TargetApp.Arguments>
+                  <uix:TargetApp.WorkingDirectory>
+                    <InArgument x:TypeArguments="x:String" />
+                  </uix:TargetApp.WorkingDirectory>
+                </uix:TargetApp>
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

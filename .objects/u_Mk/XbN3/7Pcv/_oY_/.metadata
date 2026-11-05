@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Bildlauf nach unten",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "_oY_84gjz0mEDVBbcm109g",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/_oY_84gjz0mEDVBbcm109g",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-29T09:39:28.4222118Z",
+  "Updated": "2026-07-29T09:39:28.4222118Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

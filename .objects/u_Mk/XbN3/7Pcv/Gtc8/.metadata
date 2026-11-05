@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Fabrikatkz",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "Gtc88IX2CEGGfxz4dWQ3KQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/Gtc88IX2CEGGfxz4dWQ3KQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T12:13:27.2972327Z",
+  "Updated": "2026-07-02T12:13:27.2972327Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="wdhnopwZzUufGNXLiZQ6yA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="133, 145, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1016' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="4f67fcd8-6062-4858-b101-4580e9b760a7" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="28, 148, 84, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1018' title='UPE-Aufschlag:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='UPE-Aufschlag:' /&gt;" Guid="7807c40f-0119-4369-a6a0-2068bb1e2f96" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1ddf5674721913d3e9890a3446e16832.jpg" xmlns="">0kuG3HXwRWUSce0CxBXat5A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

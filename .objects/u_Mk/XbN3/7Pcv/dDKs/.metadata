@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Rabattgruppe",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "dDKsm_12J0GVuXyh6nMfzg",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/dDKsm_12J0GVuXyh6nMfzg",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-03T11:45:38.5389007Z",
+  "Updated": "2026-07-03T11:45:38.5389007Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

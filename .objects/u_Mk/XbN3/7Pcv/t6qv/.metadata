@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Gültig ab(1)",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "t6qvoRFJp0SLfW9LkwD69A",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/t6qvoRFJp0SLfW9LkwD69A",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T12:36:36.3672034Z",
+  "Updated": "2026-07-02T12:36:36.3672034Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

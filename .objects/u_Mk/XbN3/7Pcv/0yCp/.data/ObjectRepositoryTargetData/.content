@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="gWudPbQ76U-l6Ur5gJQEqg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="24, 397, 785, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1042' title='List2' /&gt;&lt;ctrl name='*' role='list item' /&gt;" Guid="41c6b8b5-3b6b-453c-ba53-97ec7529b629" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="7390bbed815ed49f7eb15b27f1eccdb2.jpg" xmlns="">0L2-gfHYuAUOemFtGdOdycQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

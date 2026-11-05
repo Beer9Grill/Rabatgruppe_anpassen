@@ -1,0 +1,1523 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="rabatt_gruppe_anpassen" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:umam="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umame="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Enums;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:umamm="clr-namespace:UiPath.MicrosoftOffice365.Activities.Mail.Models;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.MicrosoftOffice365.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_curBetrieb" Type="InArgument(x:String)" />
+    <x:Property Name="inOut_fileJson" Type="InOutArgument(njl:JObject)" />
+    <x:Property Name="in_fileName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>rabatt_gruppe_anpassen_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Platform</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Models</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="rabatt_gruppe_anpassen" sap:VirtualizedContainerService.HintSize="1218,18343" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="textFile" />
+      <Variable x:TypeArguments="njl:JObject" Name="fileJson" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ForEachFileX DisplayName="For Each File in Folder" Filter="*.txt" Folder="C:\UiPath\anpassung_Rabattsgruppe_inCROSS\excel" sap:VirtualizedContainerService.HintSize="732,18320" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+      <ui:ForEachFileX.Body>
+        <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="698,18033" sap2010:WorkflowViewState.IdRef="Sequence_45">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="njl:JArray" Name="marken" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadTextFile File="{x:Null}" Content="[textFile]" DisplayName="Read Text File" FileName="[CurrentFile.FullName]" sap:VirtualizedContainerService.HintSize="664,124" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="664,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[CurrentFile.Name]" />
+            <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" Settings="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="664,174" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[fileJson]" JsonString="[textFile]" />
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="CROSS Service(1)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="664,17500" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Never]" ScopeGuid="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="662,17253" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="curInst" />
+                      <Variable x:TypeArguments="x:Int32" Default="0" Name="CurrentIndex" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="628,219" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="Block für Test" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText DelayAfter="0" DelayBefore="0" DisplayName="Get Text '68730 CROSS Service - 6…'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,143" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" TextString="[curInst]" Version="V5">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable ContentHash="iSmtvyrR8EikS5isGiEgFg" DesignTimeRectangle="24, 3, 2544, 28" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl role='title bar' /&gt;" Guid="7f3ac082-1c27-4afc-93be-5a58aea87455" InformativeScreenshot="8e6062b7260a205895bd994b6cf2f1c4.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/PQ_HbuvN4Ua_Ch9uflfVsQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='68730  CROSS Service - 68730 KD (68730) Gelder &amp;amp; Sorg GmbH &amp;amp; Co.*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                            <If Condition="[curInst.Contains(&quot;68730&quot;)]" DisplayName="goes only for 69730 - delete in produktion" sap:VirtualizedContainerService.HintSize="452,394" sap2010:WorkflowViewState.IdRef="If_8">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,174" sap2010:WorkflowViewState.IdRef="Sequence_42">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[new Exception(&quot;Ist Produktiv Umgebung&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'Wartung'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,194" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="E3B0DQjNLkKEMTUPADSYWQ" DesignTimeRectangle="401, 31, 60, 19" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Anwendungsmenü' role='menu bar' /&gt;&lt;ctrl name='Wartung' role='menu item' /&gt;" Guid="0f04165a-9ce5-4b7e-a4e9-8bb45841b56d" InformativeScreenshot="e5f4dba0a81727cc039435453f93fdb1.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/rM_Z4Gz_ZUaW47jb5FO36Q" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='*CROSS Service*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'ET-Stammdaten'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,194" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="cLZpTJ031kKPh24fFvkn4g" DesignTimeRectangle="3, 206, 250, 22" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Wartung' role='popup menu' /&gt;&lt;ctrl name='ET-Stammdaten' role='menu item' /&gt;" Guid="01052b0f-0d4a-45a0-8d98-7f23169fdba8" InformativeScreenshot="9ca568d0c32cf0c77764e8026355bcba.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/XgH4YdxuhEGLxLYfN8bmnQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'Rabattgruppen'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,194" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="r_POAvuFSUOjFHfVUHzILg" DesignTimeRectangle="3, 56, 323, 22" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='ET-Stammdaten' role='popup menu' /&gt;&lt;ctrl automationid='16600' /&gt;" Guid="685fd035-78c8-4f25-be50-6bd4911496f3" InformativeScreenshot="f60294aee7fd15eb2149e8f6ef5e5b25.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/jb-35vvIhUiFq8OfHS2LVQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="open 'Fabrikatgruppe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,194" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="97SmE4EzK0-dT5MFBz2-_Q" DesignTimeRectangle="106, 41, 132, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1030' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="f8c43048-ebe1-489b-80a3-8f0e0e8ce7a0" InformativeScreenshot="c3491b0db42ffc5eadb77ae4a74ad018.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/LZ2DRbA_HkysJenvQjQ9HQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Auswahl Rabattgruppen' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                              <uix:Target DesignTimeRectangle="20, 46, 87, 13" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1031' title='Fabrikatgruppe:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Fabrikatgruppe:' /&gt;" Guid="063aeb7b-256e-4940-be99-1127ff85f9f1" SearchSteps="FuzzySelector" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <If Condition="[CurrentFile.Name.Contains(&quot;FREMD&quot;)]" DisplayName="Fremd oder VW" sap:VirtualizedContainerService.HintSize="628,979" sap2010:WorkflowViewState.IdRef="If_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <If.Then>
+                        <Sequence DisplayName="FREMD" sap:VirtualizedContainerService.HintSize="450,420" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="njl:JArray">[marken]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="njl:JArray">[new Newtonsoft.Json.Linq.JArray("F")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click FREMD Gruppe" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_33" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="1, 27, 130, 13" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Fabrikatgruppe:' role='list' /&gt;&lt;ctrl name='F-Fremdfabrikate' role='list item' /&gt;" Guid="73869c08-99b4-4bc4-9822-efc6c2ee5354" InformativeScreenshot="7c10d300d83c0ea165149d60065cba1a.jpg" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="NORMAL" sap:VirtualizedContainerService.HintSize="450,420" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_6">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="njl:JArray">[marken]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="njl:JArray">[new Newtonsoft.Json.Linq.JArray("V", "S", "C")]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click V-Gruppe" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_6" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable ContentHash="eN99BSzPsUuWFBW7u6shnQ" DesignTimeRectangle="1, 79, 130, 13" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Fabrikatgruppe:' role='list' /&gt;&lt;ctrl name='V-Volkswagengruppe' role='list item' /&gt;" Guid="58981216-1167-403f-b747-dfd57b21a9fe" InformativeScreenshot="979f53af7cf978d41c8bc0ea64a62d0b.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/lVJ96YfwEUS3gWxisxivyA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click '&amp;Ok'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,194" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="vHyb1SFUu0GculD-AM4svQ" DesignTimeRectangle="20, 77, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Ok' /&gt;" Guid="6b170a7e-a8da-44a5-b810-83ab5f5d56d2" InformativeScreenshot="b5038f0f5922e0e9de1814b2b6613046.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/hbarPxSpfkKdv6Uzna_O3Q" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Auswahl Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6">
+                          <uix:TargetAnchorable.WaitForReadyArgument>
+                            <InArgument x:TypeArguments="uix:NWaitForReady">
+                              <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="Interactive" />
+                            </InArgument>
+                          </uix:TargetAnchorable.WaitForReadyArgument>
+                        </uix:TargetAnchorable>
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ui:ForEach x:TypeArguments="scg:KeyValuePair(x:String, njl:JToken)" CurrentIndex="{x:Null}" DisplayName="For Each curRabattgruppe" sap:VirtualizedContainerService.HintSize="628,13699" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[fileJson]">
+                      <ui:ForEach.Body>
+                        <ActivityAction x:TypeArguments="scg:KeyValuePair(x:String, njl:JToken)">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="scg:KeyValuePair(x:String, njl:JToken)" Name="curRabattgruppe" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="626,13568" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="njl:JToken" Name="Fabrikanen_ar" />
+                              <Variable x:TypeArguments="njl:JToken" Name="Kunden_ar" />
+                              <Variable x:TypeArguments="x:String" Name="rabattgruppe" />
+                              <Variable x:TypeArguments="x:String" Name="nettorabat" />
+                              <Variable x:TypeArguments="x:Boolean" Name="IfFab" />
+                              <Variable x:TypeArguments="x:Boolean" Name="ifKunde" />
+                              <Variable x:TypeArguments="x:String" Name="relevant_RG" />
+                              <Variable x:TypeArguments="x:String" Name="bezeichnung_RG" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="592,304" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="njl:JToken">[Fabrikanen_ar]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="njl:JToken">[curRabattgruppe.Value("Fabrikanten")]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="njl:JToken">[Kunden_ar]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="njl:JToken">[curRabattgruppe.Value("Kunden")]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[rabattgruppe]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[curRabattgruppe.Value("RabattgruppeNummer").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[nettorabat]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[curRabattgruppe.Value("Nettorabat").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[relevant_RG]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[curRabattgruppe.Value("RelevanteRG").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:String">[bezeichnung_RG]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:String">[curRabattgruppe.Value("Bezeichnung").ToString]</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <If Condition="[String.IsNullOrWhiteSpace(rabattgruppe) or relevant_RG = &quot;NEIN&quot;]" DisplayName="Wenn Rabattgruppe leer ist" sap:VirtualizedContainerService.HintSize="592,512" sap2010:WorkflowViewState.IdRef="If_2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,283" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_9" Message="[rabattgruppe + &quot; ist nicht relevant... continue&quot;]" />
+                                  <ui:Continue sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <uix:NCheckState DisplayName="Rabat Gruppe erstellt?" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="592,3152" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Yes" sap:VirtualizedContainerService.HintSize="522,1895" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                  <Sequence.Variables>
+                                    <Variable x:TypeArguments="x:Int32" Default="0" Name="CurrentIndex" />
+                                    <Variable x:TypeArguments="x:Boolean" Name="elementSichtbar" />
+                                  </Sequence.Variables>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,175" sap2010:WorkflowViewState.IdRef="LogMessage_10" Message="[&quot;Rabattgruppe &quot; + rabattgruppe]" />
+                                  <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="488,1475" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:01">
+                                    <ui:RetryScope.ActivityBody>
+                                      <ActivityAction>
+                                        <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="486,1187" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[elementSichtbar]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,952" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                            <TryCatch.Try>
+                                              <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="go to rabattgruppe" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_31" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Timeout="3" Version="V5">
+                                                  <uix:NClick.Target>
+                                                    <uix:TargetAnchorable ContentHash="4AAGGwYx5kiWEL6Xu7luRA" DesignTimeRectangle="23, 70, 520, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[String.Format(&quot;&lt;ctrl  role='list item' virtualname='*{0}*'  /&gt;&quot;,rabattgruppe)]" Guid="28ea098d-5240-4263-9444-62a7c344b05f" InformativeScreenshot="9039e4ba2b1faa895fe80f858bf39fbb.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/jQtFB3WUVU2N2eVi78HZFA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                  </uix:NClick.Target>
+                                                </uix:NClick>
+                                              </Sequence>
+                                            </TryCatch.Try>
+                                            <TryCatch.Catches>
+                                              <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                                <ActivityAction x:TypeArguments="s:Exception">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,452" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Boolean">[elementSichtbar]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,217" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="8" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5" />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </Catch>
+                                            </TryCatch.Catches>
+                                            <TryCatch.Finally>
+                                              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </Sequence>
+                                            </TryCatch.Finally>
+                                          </TryCatch>
+                                        </Sequence>
+                                      </ActivityAction>
+                                    </ui:RetryScope.ActivityBody>
+                                    <ui:RetryScope.Condition>
+                                      <ActivityFunc x:TypeArguments="x:Boolean">
+                                        <ui:CheckTrue ErrorMessage="{x:Null}" DisplayName="Check True" Expression="[elementSichtbar]" sap:VirtualizedContainerService.HintSize="462,131" sap2010:WorkflowViewState.IdRef="CheckTrue_1" />
+                                      </ActivityFunc>
+                                    </ui:RetryScope.Condition>
+                                  </ui:RetryScope>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'D&amp;etail'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="488,185" sap2010:WorkflowViewState.IdRef="NClick_8" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable ContentHash="tWpEMIKgyk6CZAlhv0SMxg" DesignTimeRectangle="116, 736, 85, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='60' title='D&amp;amp;etail' /&gt;" Guid="e21884d8-f6ad-4222-88be-bc28ca5f2e18" InformativeScreenshot="42fc5c7ee0257bfdbec3b024b318707e.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/MfkrdMn_pki6-GMm15xLTA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="No" sap:VirtualizedContainerService.HintSize="522,912" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;Gruppe &quot;  +rabattgruppe+ &quot; nicht gefunden - erstelle eine neue&quot;]" />
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="create new gruppe" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_32" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable ContentHash="1nqGhONME0yfHJcm7ZWY_w" DesignTimeRectangle="205, 736, 85, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='75' title='&amp;amp;Neu' /&gt;" Guid="f1fd409a-07dc-41f8-9f1c-b21565c44028" InformativeScreenshot="df20d60a65c9fc358208264ad158b38c.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/4dNEiaY42EWtNfcBMavr7Q" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Rabattgruppe'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,246" sap2010:WorkflowViewState.IdRef="NTypeInto_11" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[rabattgruppe]" Version="V5">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable ContentHash="kgHg440k0UC85olY_yBgYA" DesignTimeRectangle="113, 73, 24, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1032' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="aa28dcf2-8ea7-461f-b040-95fe91fcc145" InformativeScreenshot="e0d4d299a87eba340ab39aebcd190950.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/dDKsm_12J0GVuXyh6nMfzg" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="22, 77, 84, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1033' title='Rabattgruppe:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Rabattgruppe:' /&gt;" Guid="f4a4d06f-02bb-4d93-a694-aabb55c45dbd" SearchSteps="FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                    <uix:NTypeInto.VerifyOptions>
+                                      <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      </uix:VerifyExecutionTypeIntoOptions>
+                                    </uix:NTypeInto.VerifyOptions>
+                                  </uix:NTypeInto>
+                                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Bezeichnung'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,237" sap2010:WorkflowViewState.IdRef="NTypeInto_12" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[bezeichnung_RG]" Version="V5">
+                                    <uix:NTypeInto.Target>
+                                      <uix:TargetAnchorable ContentHash="YE-emmIsFEay3YfpzG9_Sw" DesignTimeRectangle="113, 103, 180, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1034' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="fca5ca02-b104-4f3a-8e85-b4e413973c53" InformativeScreenshot="d8a4302f38264095651b6ec2d7dd883c.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/rEaY_REzi0Glu6qFApheEA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="22, 107, 84, 13" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1035' title='Bezeichnung:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Bezeichnung:' /&gt;" Guid="49b1988a-ce32-456e-96a0-7b86e98267d1" SearchSteps="FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NTypeInto.Target>
+                                    <uix:NTypeInto.VerifyOptions>
+                                      <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                          <InArgument x:TypeArguments="x:Boolean" />
+                                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          <InArgument x:TypeArguments="x:Double" />
+                                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                      </uix:VerifyExecutionTypeIntoOptions>
+                                    </uix:NTypeInto.VerifyOptions>
+                                  </uix:NTypeInto>
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable ContentHash="Ak3lTNb-_0yf4N8SEx5bWA" DesignTimeRectangle="23, 87, 520, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[String.Format(&quot;&lt;ctrl  role='list item' virtualname='*{0}*'  /&gt;&quot;,rabattgruppe)]" Guid="79d1f412-8eb6-4f66-a9f0-e3f8bfb46a29" InformativeScreenshot="34285f97eb5706f099b01bab21f2dfc6.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/XrQXzEryxEajtPUxpYrh6w" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                              </uix:NCheckState.Target>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </uix:NCheckState>
+                            <If sap2010:Annotation.AnnotationText="ist nicht richtig&#xA;" Condition="[nettorabat = &quot;Nettorabattgruppe&quot;]" sap:VirtualizedContainerService.HintSize="592,676" sap2010:WorkflowViewState.IdRef="If_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NCheck Action="Check" DisplayName="Check/Uncheck 'Nettorabattgruppe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NCheck_1" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                    <uix:NCheck.Target>
+                                      <uix:TargetAnchorable ContentHash="yAYV0p3UtE6YaMmFFNnxDw" DesignTimeRectangle="113, 129, 210, 21" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1036' title='Nettorabattgruppe' /&gt;" Guid="ad38428b-85fe-4272-ac41-0b0414abd7f5" InformativeScreenshot="97b2d1e09ff488feab64d4c4288fba93.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/Derp9NLbM0afgKb9UIiTKQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NCheck.Target>
+                                  </uix:NCheck>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NCheck Action="[UiPath.UIAutomationNext.Enums.NCheckType.Uncheck]" DisplayName="Check/Uncheck 'Nettorabattgruppe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,186" sap2010:WorkflowViewState.IdRef="NCheck_2" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                    <uix:NCheck.Target>
+                                      <uix:TargetAnchorable ContentHash="yAYV0p3UtE6YaMmFFNnxDw" DesignTimeRectangle="113, 129, 210, 21" ElementType="CheckBox" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1036' title='Nettorabattgruppe' /&gt;" Guid="ad38428b-85fe-4272-ac41-0b0414abd7f5" InformativeScreenshot="97b2d1e09ff488feab64d4c4288fba93.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/Derp9NLbM0afgKb9UIiTKQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                    </uix:NCheck.Target>
+                                  </uix:NCheck>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="592,180" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                              <ui:MultipleAssign.AssignOperations>
+                                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[IfFab]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                                    <ui:AssignOperation.To>
+                                      <OutArgument x:TypeArguments="x:Boolean">[ifKunde]</OutArgument>
+                                    </ui:AssignOperation.To>
+                                    <ui:AssignOperation.Value>
+                                      <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                                    </ui:AssignOperation.Value>
+                                  </ui:AssignOperation>
+                                </scg:List>
+                              </ui:MultipleAssign.AssignOperations>
+                            </ui:MultipleAssign>
+                            <Sequence DisplayName="Fabrikant Block" sap:VirtualizedContainerService.HintSize="592,3534" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="While fabrikant nicht deleted" sap:VirtualizedContainerService.HintSize="558,57" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                                <ui:InterruptibleWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1061" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NCheckState DisplayName="Check if " HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1001" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Timeout="1" Version="V5">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,439" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="delete fabrikant" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,193.6" sap2010:WorkflowViewState.IdRef="NClick_9" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable ContentHash="uTj8YzNL9kW8cvAhlaujYg" DesignTimeRectangle="874, 283, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1039' title='&amp;amp;Löschen' /&gt;" Guid="1d4761c8-9451-4020-a860-d9a1bb0b4a89" InformativeScreenshot="c4c604e5cd0d77ab7df7cda685d44388.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/RzDxD0dcTUyVDDdi2CKc2g" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="delete bestätigen" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,184.8" sap2010:WorkflowViewState.IdRef="NClick_10" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable ContentHash="tjk4ilpO-0iDdmmsTkubGg" DesignTimeRectangle="47, 119, 80, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Ja' /&gt;" Guid="62760c59-2611-4c5a-b9ab-35e60618c77c" InformativeScreenshot="20baddca3cf763ef79b89e1ba4a8f7ea.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/AMPcr__9qkm2sCRLokLmBA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[IfFab]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable ContentHash="XwQ5igp4rEqRsbs971SHqA" DesignTimeRectangle="24, 203, 815, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1038' title='List1' /&gt;&lt;ctrl name='*' role='list item' text='*' /&gt;" Guid="722d073d-c311-4e20-93bc-601327a2d89a" InformativeScreenshot="f0c46b645b013a6f0f8fdf4dcb87d57e.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/G7Rot1KENEWDzSt-US5JxQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                                      </uix:NCheckState.Target>
+                                    </uix:NCheckState>
+                                  </Sequence>
+                                </ui:InterruptibleWhile.Body>
+                                <ui:InterruptibleWhile.Condition>
+                                  <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="IfFab" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                                </ui:InterruptibleWhile.Condition>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InterruptibleWhile>
+                              <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each curFabrikant" sap:VirtualizedContainerService.HintSize="558,3385" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Fabrikanen_ar]">
+                                <ui:ForEach.Body>
+                                  <ActivityAction x:TypeArguments="njl:JToken">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="njl:JToken" Name="curFabrikant" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,3263" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="fabrikant" />
+                                        <Variable x:TypeArguments="x:String" Name="h_spanne" />
+                                        <Variable x:TypeArguments="x:String" Name="gueltig_ab" />
+                                        <Variable x:TypeArguments="x:String" Name="upe_aufschlag" />
+                                        <Variable x:TypeArguments="x:String" Name="vol_H_Spanne" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="522,273" sap2010:WorkflowViewState.IdRef="MultipleAssign_6">
+                                        <ui:MultipleAssign.AssignOperations>
+                                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[fabrikant]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curFabrikant("Fabrikant").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[h_spanne]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curFabrikant("H_Spanne").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[gueltig_ab]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curFabrikant("Gueltig_ab").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[upe_aufschlag]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curFabrikant("UPE_Aufschlag").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[vol_H_Spanne]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curFabrikant("Vol_H_Spanne").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                          </scg:List>
+                                        </ui:MultipleAssign.AssignOperations>
+                                      </ui:MultipleAssign>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522,499" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="486,388" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If Condition="[h_spanne = &quot;0.00&quot;]" sap:VirtualizedContainerService.HintSize="452,328" sap2010:WorkflowViewState.IdRef="If_9">
+                                              <If.Then>
+                                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_51">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <ui:Continue sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                                                </Sequence>
+                                              </If.Then>
+                                              <If.Else>
+                                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </Sequence>
+                                              </If.Else>
+                                            </If>
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                      </ui:CommentOut>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click '&amp;Neu'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,194" sap2010:WorkflowViewState.IdRef="NClick_13" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable ContentHash="AxEcciE5L0OtuY-2bXXP2g" DesignTimeRectangle="874, 309, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1040' title='&amp;amp;Neu' /&gt;" Guid="b53a9fa5-1579-4a36-8eba-53ee8737b015" InformativeScreenshot="97fd85d4ca4e70538f27db4e8c9ad2d8.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/oFyfVuEm10CbWwHeGpz_zA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NCheckState DisplayName="Check App State 'Wollen Sie speichern'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="522,680" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Timeout="0.5" Version="V5">
+                                        <uix:NCheckState.IfExists>
+                                          <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Ja'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_28" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                              <uix:NClick.Target>
+                                                <uix:TargetAnchorable ContentHash="zmeOUxI6pUepvvscbciOUQ" DesignTimeRectangle="35, 119, 80, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Ja' /&gt;" Guid="b1313db6-7a5c-471e-b4a6-dbc86cb2d36a" InformativeScreenshot="9d56fa8f1016d513bad6085bd013624e.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/td6rdImZikSBzYfVaxOzlA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                              </uix:NClick.Target>
+                                            </uix:NClick>
+                                          </Sequence>
+                                        </uix:NCheckState.IfExists>
+                                        <uix:NCheckState.IfNotExists>
+                                          <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </Sequence>
+                                        </uix:NCheckState.IfNotExists>
+                                        <uix:NCheckState.Target>
+                                          <uix:TargetAnchorable ContentHash="FfM5KDsf1Em6mu0H32SJLw" DesignTimeRectangle="70, 64, 117, 15" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='65535' title='Wollen Sie speichern?' /&gt;" Guid="85743c1a-935f-49b2-9e1f-b1a8e4c03e42" InformativeScreenshot="ae09dbde71e5c20e454cb5ec394db285.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/wwkbmFfec0ebDvNE66rGBQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                        </uix:NCheckState.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </uix:NCheckState>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="open fabList" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,194" sap2010:WorkflowViewState.IdRef="NClick_14" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable ContentHash="vW5uiP4wT06qNMYb0rylFg" DesignTimeRectangle="115, 44, 141, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1000' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="277cce64-90e0-45f6-a002-d4b520c45f13" InformativeScreenshot="4a65ed0234272f66578d691bf17f5246.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/Gtc88IX2CEGGfxz4dWQ3KQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="25, 47, 84, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' title='Fabrikatkz:' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Fabrikatkz:' /&gt;" Guid="f249a5b9-49b8-4d6b-83a6-c7a7d6c70040" SearchSteps="FuzzySelector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="insert Fab" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,194" sap2010:WorkflowViewState.IdRef="NClick_15" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable ContentHash="I1Majr8tQkWji908wPnvKw" DesignTimeRectangle="1, 14, 139, 13" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;ctrl name='&quot;+fabrikant+&quot;*' role='list item' /&gt;&quot;]" Guid="f0979f67-aba6-438d-9772-1c249e9843a0" InformativeScreenshot="edc9ec349442aa0f3e0c9a243d09ff93.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/VOReRWBtt0KuFZO-SD9F0Q" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6">
+                                            <uix:TargetAnchorable.WaitForReadyArgument>
+                                              <InArgument x:TypeArguments="uix:NWaitForReady">
+                                                <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_1" />
+                                              </InArgument>
+                                            </uix:TargetAnchorable.WaitForReadyArgument>
+                                          </uix:TargetAnchorable>
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="[UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always]" DelayAfter="0" DelayBefore="0" DisplayName="insert H-Spanne" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,246" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[h_spanne.Replace(&quot;.&quot;,&quot;,&quot;)]" Version="V5">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable ContentHash="TPt5A9JaokOh6s3e4k0A2w" DesignTimeRectangle="133, 93, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1002' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="6aa44ce8-09c6-499a-88bd-2bb72189f01a" InformativeScreenshot="941e6226622a38f505fb317c5e616c53.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/SwXfaVP52Eu7M0lv4lyFxQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="28, 98, 84, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1004' title='Handelsspanne:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Handelsspanne:' /&gt;" Guid="bd905474-a3e1-4d2e-b469-a74de86d33d2" SearchSteps="FuzzySelector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                            <uix:TargetAnchorable.WaitForReadyArgument>
+                                              <InArgument x:TypeArguments="uix:NWaitForReady">
+                                                <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_2" Value="Interactive" />
+                                              </InArgument>
+                                            </uix:TargetAnchorable.WaitForReadyArgument>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                        <uix:NTypeInto.VerifyOptions>
+                                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          </uix:VerifyExecutionTypeIntoOptions>
+                                        </uix:NTypeInto.VerifyOptions>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="[UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always]" DelayAfter="0" DelayBefore="0" DisplayName="Type Into 'UPE-Aufschlag'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,246" sap2010:WorkflowViewState.IdRef="NTypeInto_5" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[upe_aufschlag.Replace(&quot;.&quot;,&quot;,&quot;)]" Version="V5">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable ContentHash="wdhnopwZzUufGNXLiZQ6yA" DesignTimeRectangle="133, 145, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1016' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="4f67fcd8-6062-4858-b101-4580e9b760a7" InformativeScreenshot="1ddf5674721913d3e9890a3446e16832.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/Tk99aK3XI0qMcS5zp1N7mA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="28, 148, 84, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1018' title='UPE-Aufschlag:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='UPE-Aufschlag:' /&gt;" Guid="7807c40f-0119-4369-a6a0-2068bb1e2f96" SearchSteps="FuzzySelector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                        <uix:NTypeInto.VerifyOptions>
+                                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          </uix:VerifyExecutionTypeIntoOptions>
+                                        </uix:NTypeInto.VerifyOptions>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="[UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always]" DelayAfter="0" DelayBefore="0" DisplayName="Type Into 'Vol.Handelsspanne'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,246" sap2010:WorkflowViewState.IdRef="NTypeInto_8" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[vol_H_Spanne.Replace(&quot;.&quot;,&quot;,&quot;)]" Version="V5">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable ContentHash="rGyCRZImdkqZrYKh4gDjFA" DesignTimeRectangle="133, 119, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1012' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="ac76b328-26e8-4520-a7d1-9e6c2e621035" InformativeScreenshot="7f9e75942a24d47683e6c7beaab93b63.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/cS7JJo6RnUexu9IFheP-5w" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="28, 124, 101, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1014' title='Vol.Handelsspanne:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Vol.Handelsspanne:' /&gt;" Guid="fb96d015-3f2c-4000-990c-169709818d7b" SearchSteps="FuzzySelector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                        <uix:NTypeInto.VerifyOptions>
+                                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          </uix:VerifyExecutionTypeIntoOptions>
+                                        </uix:NTypeInto.VerifyOptions>
+                                      </uix:NTypeInto>
+                                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="[UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always]" DelayAfter="0" DelayBefore="0" DisplayName="Type Into 'Gültig ab'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,246" sap2010:WorkflowViewState.IdRef="NTypeInto_4" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[gueltig_ab]" Version="V5">
+                                        <uix:NTypeInto.Target>
+                                          <uix:TargetAnchorable ContentHash="cdRr0TERZ0mpWApteGZP2w" DesignTimeRectangle="133, 197, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1024' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="256fd9f1-e747-4e72-88e4-4dbd6b9dc411" InformativeScreenshot="169201b57d5ce5d6bce26ce8d36ef8e6.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/ETrnTMhUeUenlgOgIsPKMw" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                            <uix:TargetAnchorable.Anchors>
+                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                <uix:Target DesignTimeRectangle="28, 200, 84, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1026' title='Gültig ab:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Gültig ab:' /&gt;" Guid="0384e1a9-1d85-4327-8c9b-1c65568af4b5" SearchSteps="FuzzySelector" />
+                                              </scg:List>
+                                            </uix:TargetAnchorable.Anchors>
+                                          </uix:TargetAnchorable>
+                                        </uix:NTypeInto.Target>
+                                        <uix:NTypeInto.VerifyOptions>
+                                          <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                            <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                              <InArgument x:TypeArguments="x:Boolean" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                            <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                              <InArgument x:TypeArguments="x:Double" />
+                                            </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                          </uix:VerifyExecutionTypeIntoOptions>
+                                        </uix:NTypeInto.VerifyOptions>
+                                      </uix:NTypeInto>
+                                      <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click '&amp;Speichern'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,185" sap2010:WorkflowViewState.IdRef="NClick_21" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                        <uix:NClick.Target>
+                                          <uix:TargetAnchorable ContentHash="gFzHJaiQ_EehzuuiEOn2oA" DesignTimeRectangle="16, 236, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Speichern' /&gt;" Guid="a09fdf30-0344-460c-86e4-31a57cfdcf35" InformativeScreenshot="f6024912f3eebac3f269fa38f705790b.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/TNQ-O55yIEuWGdIa_1YqAA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                        </uix:NClick.Target>
+                                      </uix:NClick>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEach.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:ForEach>
+                            </Sequence>
+                            <Sequence DisplayName="Kunde Block" sap:VirtualizedContainerService.HintSize="592,5150" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:Int32" Default="0" Name="CurrentIndex" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:InterruptibleWhile CurrentIndex="{x:Null}" DisplayName="solange Kunde steht" sap:VirtualizedContainerService.HintSize="522,1192" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                                <ui:InterruptibleWhile.Body>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,1061" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NCheckState DisplayName="Check if Kunde noch steht" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="452,1001" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Timeout="2" Version="V5">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,439" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="delete Kunde" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable ContentHash="6TGKZiHQiUuXqc8GFwdk1Q" DesignTimeRectangle="874, 478, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1043' title='&amp;amp;Löschen' /&gt;" Guid="f43e9e85-0670-4e05-a3ed-99db899b3054" InformativeScreenshot="e28cd8eac7534c47b50b506f0c6a493b.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/qTkRFOi5BEKS_ovaaUgsLA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'delete bestätigen'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_12" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable ContentHash="tjk4ilpO-0iDdmmsTkubGg" DesignTimeRectangle="47, 119, 80, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Ja' /&gt;" Guid="62760c59-2611-4c5a-b9ab-35e60618c77c" InformativeScreenshot="20baddca3cf763ef79b89e1ba4a8f7ea.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/AMPcr__9qkm2sCRLokLmBA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.IfNotExists>
+                                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:Boolean">[ifKunde]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:Boolean">[False]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                        </Sequence>
+                                      </uix:NCheckState.IfNotExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable ContentHash="gWudPbQ76U-l6Ur5gJQEqg" DesignTimeRectangle="24, 397, 785, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1042' title='List2' /&gt;&lt;ctrl name='*' role='list item' /&gt;" Guid="41c6b8b5-3b6b-453c-ba53-97ec7529b629" InformativeScreenshot="7390bbed815ed49f7eb15b27f1eccdb2.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/0yCppl1p6k2IL-Nniyr48Q" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                                      </uix:NCheckState.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </uix:NCheckState>
+                                  </Sequence>
+                                </ui:InterruptibleWhile.Body>
+                                <ui:InterruptibleWhile.Condition>
+                                  <VisualBasicValue x:TypeArguments="x:Boolean" DisplayName="Visual basic value" ExpressionText="ifKunde" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
+                                </ui:InterruptibleWhile.Condition>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:InterruptibleWhile>
+                              <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each curKunde" sap:VirtualizedContainerService.HintSize="522,3277" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[Kunden_ar]">
+                                <ui:ForEach.Body>
+                                  <ActivityAction x:TypeArguments="njl:JToken">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="njl:JToken" Name="curKunde" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,3146" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="fabrikant_K" />
+                                        <Variable x:TypeArguments="x:String" Name="kundengruppe" />
+                                        <Variable x:TypeArguments="x:String" Name="bezeichnung" />
+                                        <Variable x:TypeArguments="x:String" Name="rabatt" />
+                                        <Variable x:TypeArguments="x:String" Name="rabatt1" />
+                                        <Variable x:TypeArguments="x:String" Name="rabatt2" />
+                                        <Variable x:TypeArguments="x:String" Name="gueltig_ab_k" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="486,335" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                        <ui:MultipleAssign.AssignOperations>
+                                          <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[fabrikant_K]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curKunde("Fabrikant").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[kundengruppe]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curKunde("Kundengruppe").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[bezeichnung]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curKunde("Bezeichnung").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[rabatt]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curKunde("Rabatt").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[rabatt1]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curKunde("Rabatt1").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[rabatt2]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curKunde("Rabatt2").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                            <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                                              <ui:AssignOperation.To>
+                                                <OutArgument x:TypeArguments="x:String">[gueltig_ab_k]</OutArgument>
+                                              </ui:AssignOperation.To>
+                                              <ui:AssignOperation.Value>
+                                                <InArgument x:TypeArguments="x:String">[curKunde("Gueltig_ab").ToString]</InArgument>
+                                              </ui:AssignOperation.Value>
+                                            </ui:AssignOperation>
+                                          </scg:List>
+                                        </ui:MultipleAssign.AssignOperations>
+                                      </ui:MultipleAssign>
+                                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,337" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                        <ui:CommentOut.Body>
+                                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[bezeichnung]" />
+                                          </Sequence>
+                                        </ui:CommentOut.Body>
+                                      </ui:CommentOut>
+                                      <If sap2010:Annotation.AnnotationText="Abstimmen mit Christoph&#xA;" Condition="[CDbl(rabatt1) &gt; 0]" DisplayName="Skip where Rabat =  0" sap:VirtualizedContainerService.HintSize="486,518" sap2010:WorkflowViewState.IdRef="If_5">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If.Then>
+                                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[rabatt1]" />
+                                          </Sequence>
+                                        </If.Then>
+                                        <If.Else>
+                                          <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ui:Continue sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Continue_2" />
+                                          </Sequence>
+                                        </If.Else>
+                                      </If>
+                                      <ui:ForEach x:TypeArguments="njl:JToken" CurrentIndex="{x:Null}" DisplayName="For Each Marke" sap:VirtualizedContainerService.HintSize="486,1896" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[marken]">
+                                        <ui:ForEach.Body>
+                                          <ActivityAction x:TypeArguments="njl:JToken">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="njl:JToken" Name="curMarke" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,1774" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="open marken Menu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_16" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable ContentHash="t2NBAp0Th0-fs-E41PTyYQ" DesignTimeRectangle="874, 504, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1044' title='&amp;amp;Neu' /&gt;" Guid="f59ab427-43e5-42b9-88c1-babd04b65295" InformativeScreenshot="d3184f4cfca08daa37b1d496f6176d8b.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/0PQgFoDIO02QV3ovqsBsGQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="open 'Fabrikatkz'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_23" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable ContentHash="i3pnVBLIjUG3fDI11KDE6w" DesignTimeRectangle="149, 70, 192, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1000' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="dbed3d3a-4f02-45f3-bdda-54b470f5a4eb" InformativeScreenshot="f52fc9894deafe4c8a3e0619436a2e5b.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/UVgOpV6vJUa8IRXLrl8i2A" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="20, 72, 114, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1001' title='Fabrikatkz:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Fabrikatkz:' /&gt;" Guid="a8f80d21-bbe1-4669-9db0-d6f402645a5e" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DisplayName="click Fabrikatz" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_37" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable ContentHash="nWwkizb7cES-raqpn1YjjQ" DesignTimeRectangle="1, 1, 190, 13" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[String.Format(&quot;&lt;ctrl name='Fabrikatkz:' role='list' /&gt;&lt;ctrl name='{0}*' role='list item' /&gt;&quot;,curMarke.ToString)]" Guid="aedf9b5a-0229-4753-ba69-286bd2bd525f" InformativeScreenshot="da35325cfba8dc38402629e0e6da1d09.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/wVEiJMFXvkeRbCnA0porhw" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="open rabattype menu" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_24" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable ContentHash="rkKI9g6oRU-M1VlKYaDVJg" DesignTimeRectangle="149, 96, 192, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1060' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="42634e11-9401-4eec-ab33-9ecedc55f925" InformativeScreenshot="3ad176d8ce31eae3f82f154dac3151a0.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/YrBWJS-BCkW89YZkP-_ocA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="20, 98, 114, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1061' title='Rabatttyp:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Rabatttyp:' /&gt;" Guid="d69ce52f-c987-400d-888e-8b3746501392" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                    <uix:TargetAnchorable.WaitForReadyArgument>
+                                                      <InArgument x:TypeArguments="uix:NWaitForReady">
+                                                        <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_4" Value="Interactive" />
+                                                      </InArgument>
+                                                    </uix:TargetAnchorable.WaitForReadyArgument>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DisplayName="Click auf rabattype" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_35" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable DesignTimeRectangle="0, 0, 192, 15" ElementType="List" ElementVisibilityArgument="Interactive" Guid="bf42855d-fd76-4998-9c9b-b371d2301e4e" InformativeScreenshot="e0c78ab41c23f90276e0eec967789324.jpg" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click 'Abnehmergruppe'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable ContentHash="ZBrYcagr8kWsGklghrvO1g" DesignTimeRectangle="149, 44, 192, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1046' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="012ff263-1735-481b-8ae8-d288a53a59b6" InformativeScreenshot="da5cd56b80ecc1a2c11d9311cad9f09f.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/2GSo2iALlEeheOVzghYKeQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="20, 49, 126, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1047' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' title='Abnehmergruppe:' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Abnehmergruppe:' /&gt;" Guid="e6157175-27bd-4324-a3ad-c54fcf09f6ed" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                    <uix:TargetAnchorable.WaitForReadyArgument>
+                                                      <InArgument x:TypeArguments="uix:NWaitForReady">
+                                                        <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="Interactive" />
+                                                      </InArgument>
+                                                    </uix:TargetAnchorable.WaitForReadyArgument>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DisplayName="Clickauf Kundengruppe" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_19" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable ContentHash="-6HZSdJd5k6ZejeMQe0X-g" DesignTimeRectangle="1, 1, 190, 13" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[String.Format(&quot;&lt;ctrl name='Abnehmergruppe:' role='list' /&gt;&lt;ctrl name='*{0}*' role='list item' /&gt;&quot;, bezeichnung)]" Guid="bcffa989-2e2c-4894-a4ec-2151113bfeb6" InformativeScreenshot="63f3c92d778bf2c5515ce046218d590b.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/DbuymaKNr0-cabAfmhvR3A" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6">
+                                                    <uix:TargetAnchorable.WaitForReadyArgument>
+                                                      <InArgument x:TypeArguments="uix:NWaitForReady">
+                                                        <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_3" />
+                                                      </InArgument>
+                                                    </uix:TargetAnchorable.WaitForReadyArgument>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="[UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always]" DelayAfter="0" DelayBefore="0" DisplayName="Type Into 'Rabattsatz'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NTypeInto_10" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[rabatt1.replace(&quot;.&quot;,&quot;,&quot;)]" Version="V5">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable ContentHash="G99L-FzI3EWpF8HvjbkhPA" DesignTimeRectangle="163, 148, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1048' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="7198aded-7329-44f7-b3fd-de938e8b821c" InformativeScreenshot="0c2f486109ffb9a946f619bd1db79e92.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/7O9iKP3zV0mHN-x5nm-Cpg" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="34, 153, 126, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1050' title='Rabattsatz:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Rabattsatz:' /&gt;" Guid="0d42704e-00ee-4157-ba59-1b799e8f583e" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                    <uix:TargetAnchorable.WaitForReadyArgument>
+                                                      <InArgument x:TypeArguments="uix:NWaitForReady">
+                                                        <Literal x:TypeArguments="uix:NWaitForReady" sap2010:WorkflowViewState.IdRef="Literal`1_1" Value="Interactive" />
+                                                      </InArgument>
+                                                    </uix:TargetAnchorable.WaitForReadyArgument>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                                <uix:NTypeInto.VerifyOptions>
+                                                  <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                  </uix:VerifyExecutionTypeIntoOptions>
+                                                </uix:NTypeInto.VerifyOptions>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NTypeInto>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="[UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always]" DelayAfter="0" DelayBefore="0" DisplayName="Type Into 'Gültig ab im Kunde Block'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NTypeInto_7" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[gueltig_ab_k]" Version="V5">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable ContentHash="aeZIpqdYq0S0IWjTPd7-EA" DesignTimeRectangle="163, 202, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1056' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="18a9eca4-20fa-4ee7-a23d-ecd5558cf311" InformativeScreenshot="1ee23d76875c67f5ffb484830450a780.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/t6qvoRFJp0SLfW9LkwD69A" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="34, 205, 126, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1072' title='Gültig ab:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Gültig ab:' /&gt;" Guid="ab057790-3969-4e38-9972-155556f8db4e" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                                <uix:NTypeInto.VerifyOptions>
+                                                  <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                  </uix:VerifyExecutionTypeIntoOptions>
+                                                </uix:NTypeInto.VerifyOptions>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NTypeInto>
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="[UiPath.UIAutomationNext.Enums.NTypeByClipboardMode.Always]" DelayAfter="0" DelayBefore="0" DisplayName="Type Into 'Aufschlagsatz'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,57" sap2010:WorkflowViewState.IdRef="NTypeInto_9" InteractionMode="SameAsCard" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Text="[rabatt2.replace(&quot;.&quot;,&quot;,&quot;)]" Version="V5">
+                                                <uix:NTypeInto.Target>
+                                                  <uix:TargetAnchorable ContentHash="MFBra7IbRUmxKMxgAJrKXw" DesignTimeRectangle="163, 174, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1121' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="d7ddbe50-c433-4c8a-b7bc-e3a6161818a1" InformativeScreenshot="820e38cea7dcd5774199d1ef115500fa.jpg" IsResponsive="True" Reference="4fDvIQNA40qlErr7DuMMoA/8tVEr2tFekmaOIRgVUGFbA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="34, 179, 126, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1120' title='Aufschlagsatz:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Aufschlagsatz:' /&gt;" Guid="8583edd8-d667-4bef-92c4-51ad01f14a36" SearchSteps="FuzzySelector" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NTypeInto.Target>
+                                                <uix:NTypeInto.VerifyOptions>
+                                                  <uix:VerifyExecutionTypeIntoOptions Mode="Appears">
+                                                    <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                      <InArgument x:TypeArguments="x:Boolean" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                                                    <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                      <InArgument x:TypeArguments="x:Double" />
+                                                    </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                                  </uix:VerifyExecutionTypeIntoOptions>
+                                                </uix:NTypeInto.VerifyOptions>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NTypeInto>
+                                              <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="0" DelayBefore="0" DisplayName="Click '&amp;Speichern(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable ContentHash="Z51jnYG5E0msc8JjBFfLPw" DesignTimeRectangle="20, 244, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Speichern' /&gt;" Guid="61451724-18e9-490d-ba91-8ef0273eeb1c" InformativeScreenshot="ae27e76444813cc9a316812eadce6462.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/QJNlFHkIi0G_gPt2jNzDtA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                                </uix:NClick.Target>
+                                              </uix:NClick>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ui:ForEach.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:ForEach>
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEach.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:ForEach>
+                              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '&amp;Speichern(2)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="522,194" sap2010:WorkflowViewState.IdRef="NClick_27" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable ContentHash="mA_vAfWH7k2wyodNRNcc3A" DesignTimeRectangle="22, 556, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Speichern' /&gt;" Guid="e34a5210-f52a-4392-806e-de9c0759f036" InformativeScreenshot="96f47b0a4af4d2565b504b8776422dc7.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/f4pyemxFWU2c7Nratt4C6Q" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                </uix:NClick.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </uix:NClick>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522,356" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Bildlauf nach unten'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_39" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable ContentHash="q9ANTSMiM06UG1R9u8YS_A" DesignTimeRectangle="811, 707, 17, 17" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='50' /&gt;&lt;ctrl automationid='NonClientVerticalScrollBar' /&gt;&lt;ctrl automationid='DownButton' name='Bildlauf nach unten' role='push button' /&gt;" Guid="673d1374-4225-4544-8036-5787579e2f7e" InformativeScreenshot="603c8999ef61b0a5d15b48f8b8350ec3.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/_oY_84gjz0mEDVBbcm109g" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                              </ui:CommentOut>
+                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="522,48" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,245" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Schließen'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,185" sap2010:WorkflowViewState.IdRef="NClick_26" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable ContentHash="PN5Gq8c0g0O6O9IaWX1GpQ" DesignTimeRectangle="928, 1, 34, 30" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Schließen' role='push button' /&gt;" Guid="11eea338-fbe9-4c1d-b6df-842ace406730" InformativeScreenshot="ebd3f5eafcc37cd41121f55e2617b5ed.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/6DYHSAM170SwcOJ-2J0b6w" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppe' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:CommentOut>
+                            </Sequence>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEach.Body>
+                    </ui:ForEach>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'S&amp;chließen'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="628,194" sap2010:WorkflowViewState.IdRef="NClick_38" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable ContentHash="VUkhhQdqyEWXiWvb01iZlw" DesignTimeRectangle="21, 736, 85, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='102' title='S&amp;amp;chließen' /&gt;" Guid="b766ed93-05af-4aef-ac4d-25f0fa810feb" InformativeScreenshot="c3f0a3aa0d9803e81494cfea850d08fa.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/iX9Z_ds_yEyqHgLA_CeVhQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NCheckState DisplayName="Check App State 'Rückfrage'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="628,1132" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Timeout="2" Version="V5">
+                      <uix:NCheckState.IfExists>
+                        <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,706" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'OK'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,194" sap2010:WorkflowViewState.IdRef="NClick_40" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58afd626-37f0-4a00-94a2-8c606c4619d9" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable ContentHash="T5h_4plADUGwdwyITSFIrw" DesignTimeRectangle="232, 216, 80, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1' title='OK' /&gt;" Guid="399f0cd7-9148-468c-8b00-fe4c7151493a" InformativeScreenshot="a633a675cb9930d22ae78092dabe5b07.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/VUVpuejyPUSdlkOGOkXoDA" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <umam:SendMailConnections ArgumentAttachmentPaths="{x:Null}" AttachmentList="{x:Null}" AttachmentPaths="{x:Null}" Attachments="{x:Null}" Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" MailboxBackup="{x:Reference __ReferenceID1}" ReplyTo="{x:Null}" SensitivityLabelId="{x:Null}" AttachmentInputMode="Existing" AuthScopesInvalid="False" ConnectionId="0840bc1a-f08f-4a6f-b275-50a06689a0de" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="416,452" sap2010:WorkflowViewState.IdRef="SendMailConnections_1" Importance="Normal" InputType="TEXT" IsDeliveryReceiptRequested="False" IsReadReceiptRequested="False" SaveAsDraft="False" Subject="Meldung RPA Bot" TextBody="[&quot;Handelsspannen in Rabattgruppen verändert.: &quot; + in_curBetrieb]" To="[New String(){&quot;rpa_bot@avemo-it.de&quot;}]" UseConnectionService="True" UseSharedMailbox="False">
+                            <umam:SendMailConnections.AttachmentsBackup>
+                              <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
+                                <usau:BackupSlot.BackupValues>
+                                  <scg:Dictionary x:TypeArguments="umame:AttachmentInputMode, scg:List(x:Object)" />
+                                </usau:BackupSlot.BackupValues>
+                              </usau:BackupSlot>
+                            </umam:SendMailConnections.AttachmentsBackup>
+                            <umam:SendMailConnections.InputTypeBackup>
+                              <usau:BackupSlot x:TypeArguments="umame:BodyInputType" StoredValue="TEXT">
+                                <usau:BackupSlot.BackupValues>
+                                  <scg:List x:TypeArguments="x:Object" x:Key="HTML" Capacity="1">
+                                    <x:Null />
+                                  </scg:List>
+                                </usau:BackupSlot.BackupValues>
+                              </usau:BackupSlot>
+                            </umam:SendMailConnections.InputTypeBackup>
+                            <umam:SendMailConnections.Mailbox>
+                              <InArgument x:TypeArguments="x:String" x:Name="__ReferenceID0" />
+                            </umam:SendMailConnections.Mailbox>
+                            <umam:SendMailConnections.MailboxArg>
+                              <umamm:MailboxArgument SharedMailbox="{x:Reference __ReferenceID0}" UseSharedMailbox="False">
+                                <umamm:MailboxArgument.Backup>
+                                  <usau:BackupSlot x:TypeArguments="umame:MailboxSelectionMode" x:Name="__ReferenceID1" StoredValue="NoMailbox">
+                                    <usau:BackupSlot.BackupValues>
+                                      <scg:Dictionary x:TypeArguments="umame:MailboxSelectionMode, scg:List(x:Object)" />
+                                    </usau:BackupSlot.BackupValues>
+                                  </usau:BackupSlot>
+                                </umamm:MailboxArgument.Backup>
+                              </umamm:MailboxArgument>
+                            </umam:SendMailConnections.MailboxArg>
+                          </umam:SendMailConnections>
+                        </Sequence>
+                      </uix:NCheckState.IfExists>
+                      <uix:NCheckState.IfNotExists>
+                        <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,90" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </uix:NCheckState.IfNotExists>
+                      <uix:NCheckState.Target>
+                        <uix:TargetAnchorable ContentHash="n82fbtb52E6jwMkmpcnWxQ" DesignTimeRectangle="0, 0, 421, 257" ElementVisibilityArgument="Interactive" Guid="bdde24f3-e5d7-418a-b6dc-0722c782ad2c" InformativeScreenshot="2ae782bf1e5e1d69419540b43a29f678.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/sEWaUg0qI0KmShRIbDuSLQ" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+                      </uix:NCheckState.Target>
+                    </uix:NCheckState>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.OCREngine>
+                <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                  <ActivityFunc.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                  </ActivityFunc.Argument>
+                </ActivityFunc>
+              </uix:NApplicationCard.OCREngine>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1936, 1048" ContentHash="VH8gRbIi002vmPU71m_J5Q" FilePath="C:\cross2\bin\twe.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVFhHxZc9TwJBEIYp/AkmGi1NiNZqtCfaixbEivAD/OrRBEulsIUKK7Szwk6MAQoLTSTxq9BAYYIFuVhYWKx51sxmOUH5OO4mmXA3uzPvs7NDAqFSuaIeHp8CcbRDPNhWLpW112p1E6tWqzrmOE7LXuzztaZeUofa388KJt4uh5p2bbQNAAnT4Rm1FFlWqytramJsUscw3omznj5I69hX01F30bi6T2xq4fpRRl2NhvXzSf5U7yWPTwQLhfNfMQPAC0ESbVohJQlygcRuIlH1lsub/djHbVXH2S+1EMYAF3jpjAHIZrIqEU+0FLNNACiwMLeomsWSup6NuLdpoyvscx9IOsCaXIsBsOnamVwJ4nSB+6blbmMenneS+hlB8siRTnIIuQLqGABIWehkrMkcYO0AmAnaz6c9wHTWPjW2m9zTMQPAIqRbG9tmI1D2EEIPAInc/cXIuAbhOjh1ZWpezwAmA0wtcrli6suVCFTLtwBqabW02z2EMqw8I8occGpcxAVe6pALiMyAHWsB8NsajUZwAMXipUql9oMBQDwWWw8GQMQDAbDFfQdwi/sK0E7cN4BO4r4A/CU+dID/xIcK0I340AC6FR8KQC/ingP0Ku4pQD/ingH0K+4JwCDiAwMMKj4QgBfieF8AXonjPQN4KY73BMAPSBK89Fzu+Acg6L/n36OUJbyvZzymAAAAAElFTkSuQmCC" InformativeScreenshot="207834c55163105ee90dcbe0aedb084f.jpg" Reference="4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag" Selector="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='*CROSS Service**' /&gt;" Version="V2">
+                  <uix:TargetApp.Arguments>
+                    <InArgument x:TypeArguments="x:String" />
+                  </uix:TargetApp.Arguments>
+                  <uix:TargetApp.WorkingDirectory>
+                    <InArgument x:TypeArguments="x:String" />
+                  </uix:TargetApp.WorkingDirectory>
+                </uix:TargetApp>
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachFileX.Body>
+    </ui:ForEachFileX>
+  </Sequence>
+</Activity>

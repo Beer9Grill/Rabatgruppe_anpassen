@@ -1,0 +1,15 @@
+{
+  "CrossAuth": "Cross_credentials",
+  "tableRead": true,
+  "Altgruppen": [
+    {
+      "Altgruppe": "GuS",
+      "Betriebe": [
+        {
+          "Betrieb": "68730",
+          "Status": "closed"
+        }
+      ]
+    }
+  ]
+}

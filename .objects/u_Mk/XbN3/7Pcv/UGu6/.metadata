@@ -1,0 +1,14 @@
+﻿{
+  "Name": "twe.exe(2)",
+  "Type": "Element",
+  "TaxonomyType": "Listbox",
+  "Id": "UGu6sg2u30iz8cJQrV32AQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/UGu6sg2u30iz8cJQrV32AQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-07T09:59:56.6295905Z",
+  "Updated": "2026-07-07T09:59:56.6295905Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

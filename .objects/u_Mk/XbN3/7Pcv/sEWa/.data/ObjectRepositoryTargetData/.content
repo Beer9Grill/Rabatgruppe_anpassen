@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="n82fbtb52E6jwMkmpcnWxQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="0, 0, 421, 257" ElementVisibilityArgument="Interactive" Guid="bdde24f3-e5d7-418a-b6dc-0722c782ad2c" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="2ae782bf1e5e1d69419540b43a29f678.jpg" xmlns="">0OHxpFLdkWUOYdpsQ8RN0bw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="zmeOUxI6pUepvvscbciOUQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="35, 119, 80, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='6' title='&amp;amp;Ja' /&gt;" Guid="b1313db6-7a5c-471e-b4a6-dbc86cb2d36a" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rückfrage' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9d56fa8f1016d513bad6085bd013624e.jpg" xmlns="">0ZmU_O-5UzkqK6Ns3beU2CQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

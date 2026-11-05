@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="16n28Wzv0UKPVa2l9y0GQA" Reference="4fDvIQNA40qlErr7DuMMoA/xhC1dgnGR0yzDJXCAUcYvA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="21, 68, 295, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;wnd ctrlid='8092' /&gt;&lt;ctrl name='KD (&quot;+betrieb+&quot;*)' role='list item' /&gt;&quot;]" Guid="bd3a0b1f-148d-458e-820a-f2394be1b627" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Liste von Arbeitsbereichen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="47b867140dbc77264ad3109d6ad5def9.jpg" xmlns="">0oFeGLnI_vk6RSAKq6a-xUQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

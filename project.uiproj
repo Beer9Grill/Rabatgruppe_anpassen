@@ -1,0 +1,6 @@
+{
+  "Name": "anpassung_Rabattsgruppe_inCROSS",
+  "ProjectType": "Process",
+  "Description": "Der Roboter geht die Rabattsgruppen in einer Excell durch und passt aktuelisiert diese in alle 4 Cross Instanzen\r\n",
+  "MainFile": "Main.xaml"
+}

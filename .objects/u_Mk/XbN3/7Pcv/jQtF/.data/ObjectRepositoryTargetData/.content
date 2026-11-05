@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="4AAGGwYx5kiWEL6Xu7luRA" Reference="4fDvIQNA40qlErr7DuMMoA/jQtFB3WUVU2N2eVi78HZFA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="23, 70, 520, 17" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[String.Format(&quot;&lt;ctrl  role='list item' virtualname='*{0}*'  /&gt;&quot;,rabattgruppe)]" Guid="28ea098d-5240-4263-9444-62a7c344b05f" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9039e4ba2b1faa895fe80f858bf39fbb.jpg" xmlns="">0084JjzLak0WFd-vHqSJ3yg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

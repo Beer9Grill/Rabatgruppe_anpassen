@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Fabrikatgruppe B-Bentl…",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "5CeZxgD8mEGi9ND76NIPdQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/5CeZxgD8mEGi9ND76NIPdQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T11:34:55.1351504Z",
+  "Updated": "2026-07-02T11:34:55.1351504Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "68730 CROSS Service - 6…",
+  "Type": "Element",
+  "Id": "PQ_HbuvN4Ua_Ch9uflfVsQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/PQ_HbuvN4Ua_Ch9uflfVsQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-07T11:42:16.2518774Z",
+  "Updated": "2026-07-07T11:42:16.2518774Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

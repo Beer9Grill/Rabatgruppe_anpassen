@@ -1,0 +1,13 @@
+﻿{
+  "Name": "KD (25306)",
+  "Type": "Element",
+  "Id": "xhC1dgnGR0yzDJXCAUcYvA",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/xhC1dgnGR0yzDJXCAUcYvA",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/X5Sp__JrFkGukIGa8gXAzQ",
+  "Created": "2026-07-01T11:30:11.4717419Z",
+  "Updated": "2026-07-01T11:30:11.4717419Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

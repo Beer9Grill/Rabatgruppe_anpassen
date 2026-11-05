@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="vW5uiP4wT06qNMYb0rylFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="115, 44, 141, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1000' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="277cce64-90e0-45f6-a002-d4b520c45f13" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Fabrikatrabattgruppe' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="25, 47, 84, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' title='Fabrikatkz:' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Fabrikatkz:' /&gt;" Guid="f249a5b9-49b8-4d6b-83a6-c7a7d6c70040" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="4a65ed0234272f66578d691bf17f5246.jpg" xmlns="">0Ex6x4gjJQUW26EVPf3fTOQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

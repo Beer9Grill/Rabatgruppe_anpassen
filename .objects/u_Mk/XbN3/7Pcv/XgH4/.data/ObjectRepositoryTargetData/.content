@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cLZpTJ031kKPh24fFvkn4g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="3, 206, 250, 22" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Wartung' role='popup menu' /&gt;&lt;ctrl name='ET-Stammdaten' role='menu item' /&gt;" Guid="01052b0f-0d4a-45a0-8d98-7f23169fdba8" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9ca568d0c32cf0c77764e8026355bcba.jpg" xmlns="">0zBwu9L7lJUmIW4eBk6O4zw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

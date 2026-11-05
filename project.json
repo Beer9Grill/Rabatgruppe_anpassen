@@ -1,0 +1,66 @@
+{
+  "name": "anpassung_Rabattsgruppe_inCROSS",
+  "projectId": "dbfbfb2d-eb78-400a-b94f-52090f65c6c4",
+  "description": "Der Roboter geht die Rabattsgruppen in einer Excell durch und passt aktuelisiert diese in alle 4 Cross Instanzen\r\n",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Avemo_library": "[1.2.57]",
+    "UiPath.Excel.Activities": "[3.6.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[3.12.0-preview]",
+    "UiPath.System.Activities": "[26.6.2]",
+    "UiPath.WebAPI.Activities": "[2.4.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.191.0",
+  "projectVersion": "1.0.19",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": [
+        "complition_track.json",
+        "excel/config.json",
+        "excel/Rabattgruppen-GRUPPE-FREMD (1).xlsx.txt",
+        "excel/Rabattgruppen GRUPPE.xlsx.txt"
+      ]
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "65fc0c0e-a406-47e0-bfe5-5c00e3fae40e",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eN99BSzPsUuWFBW7u6shnQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1, 79, 130, 13" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='Fabrikatgruppe:' role='list' /&gt;&lt;ctrl name='V-Volkswagengruppe' role='list item' /&gt;" Guid="58981216-1167-403f-b747-dfd57b21a9fe" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="979f53af7cf978d41c8bc0ea64a62d0b.jpg" xmlns="">0X5llxSOz0ke-YK-ExNCzew</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "CROSS Service",
+  "Type": "App",
+  "Id": "u_Mk7ts3-kSHHOZFvAgZSw",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/u_Mk7ts3-kSHHOZFvAgZSw",
+  "Created": "2026-07-01T11:26:58.1357352Z",
+  "Updated": "2026-07-01T11:26:58.1357352Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

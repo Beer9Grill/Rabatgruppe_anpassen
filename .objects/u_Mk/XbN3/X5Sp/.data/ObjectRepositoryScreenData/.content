@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="85puPl7lsUSZhHrPT1ZfGQ" Reference="4fDvIQNA40qlErr7DuMMoA/X5Sp__JrFkGukIGa8gXAzQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 1936, 1048" ContentHash="dI-BNC5QcE-ib70hbpKUYA" FilePath="C:\cross2\bin\twe.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIFSURBVFhHxZc9TwJBEIYp/AkmGi1NiNZqtCfaixbEivAD/OrRBEulsIUKK7Szwk6MAQoLTSTxq9BAYYIFuVhYWKx51sxmOUH5OO4mmXA3uzPvs7NDAqFSuaIeHp8CcbRDPNhWLpW112p1E6tWqzrmOE7LXuzztaZeUofa388KJt4uh5p2bbQNAAnT4Rm1FFlWqytramJsUscw3omznj5I69hX01F30bi6T2xq4fpRRl2NhvXzSf5U7yWPTwQLhfNfMQPAC0ESbVohJQlygcRuIlH1lsub/djHbVXH2S+1EMYAF3jpjAHIZrIqEU+0FLNNACiwMLeomsWSup6NuLdpoyvscx9IOsCaXIsBsOnamVwJ4nSB+6blbmMenneS+hlB8siRTnIIuQLqGABIWehkrMkcYO0AmAnaz6c9wHTWPjW2m9zTMQPAIqRbG9tmI1D2EEIPAInc/cXIuAbhOjh1ZWpezwAmA0wtcrli6suVCFTLtwBqabW02z2EMqw8I8occGpcxAVe6pALiMyAHWsB8NsajUZwAMXipUql9oMBQDwWWw8GQMQDAbDFfQdwi/sK0E7cN4BO4r4A/CU+dID/xIcK0I340AC6FR8KQC/ingP0Ku4pQD/ingH0K+4JwCDiAwMMKj4QgBfieF8AXonjPQN4KY73BMAPSBK89Fzu+Acg6L/n36OUJbyvZzymAAAAAElFTkSuQmCC" Reference="4fDvIQNA40qlErr7DuMMoA/X5Sp__JrFkGukIGa8gXAzQ" Selector="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='*CROSS Service*' /&gt;" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="34f51aa5679356d1740df61835c3a9cb.jpg" xmlns="">0ZnkR7pmKVUKE-O1nhV4TKg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

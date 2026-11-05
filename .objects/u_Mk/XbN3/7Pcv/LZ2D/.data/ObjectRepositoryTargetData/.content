@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="97SmE4EzK0-dT5MFBz2-_Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="106, 41, 132, 21" ElementType="DropDown" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1030' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="f8c43048-ebe1-489b-80a3-8f0e0e8ce7a0" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Auswahl Rabattgruppen' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="20, 46, 87, 13" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1031' title='Fabrikatgruppe:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Fabrikatgruppe:' /&gt;" Guid="063aeb7b-256e-4940-be99-1127ff85f9f1" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c3491b0db42ffc5eadb77ae4a74ad018.jpg" xmlns="">0yPbfX3_L7UuPlTNeVZUAmg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Hover</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

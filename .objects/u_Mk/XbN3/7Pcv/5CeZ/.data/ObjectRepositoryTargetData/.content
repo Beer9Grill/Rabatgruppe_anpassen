@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6Ax6aKJTDEq_qYNraUamFw" Reference="4fDvIQNA40qlErr7DuMMoA/5CeZxgD8mEGi9ND76NIPdQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="222, 42, 15, 19" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='1030' /&gt;&lt;ctrl name='Fabrikatgruppe:' role='combo box' /&gt;&lt;ctrl automationid='DropDown' /&gt;" Guid="39171647-655e-43f5-b478-3c15421d833a" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Auswahl Rabattgruppen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="e0b0c139cb62743c1a2c7b770dc6fde7.jpg" xmlns="">0u8anCDni90yRE1TwsbFeDg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="QWypjePrc0Gg426sYpmVuQ" Reference="4fDvIQNA40qlErr7DuMMoA/Ia2MTnNJqECFchib_IBhlA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="8, 31, 54, 19" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Anwendungsmenü' role='menu bar' /&gt;&lt;ctrl name='Auftrag' role='menu item' /&gt;" Guid="638e86f4-2f13-435c-b207-f92092970c2f" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='AfxMDIFrame140u' title='*CROSS Service*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="afd65a92d54896ff799a9f337ae73b3e.jpg" xmlns="">0X7ErpAVmsEyBEeSDM__J8g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

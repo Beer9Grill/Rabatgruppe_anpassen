@@ -1,0 +1,13 @@
+﻿{
+  "Name": "68730  CROSS Service - 68730 KD (68730 INAKTI",
+  "Type": "Screen",
+  "Id": "f2i4tvpBlEq_CcW2AVkGMQ",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/f2i4tvpBlEq_CcW2AVkGMQ",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/XbN3MLizbEyQIFs7yaWIFQ",
+  "Created": "2026-09-24T08:11:50.4865296Z",
+  "Updated": "2026-09-24T08:11:50.4865296Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

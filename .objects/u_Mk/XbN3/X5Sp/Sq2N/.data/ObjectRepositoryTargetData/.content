@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1J1qelwMOEqvjTATQKKmfw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="19, 372, 75, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd ctrlid='100' title='&amp;amp;Übernehmen' /&gt;" Guid="fe2a116b-8adf-41bd-9831-918c7d570002" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Liste von Arbeitsbereichen' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9fddf2e2997980973bc74c06156754bc.jpg" xmlns="">0Mfsp_gACVE2U5ME1UnvpBQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

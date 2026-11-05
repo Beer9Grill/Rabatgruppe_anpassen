@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Rabatttyp",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "YrBWJS-BCkW89YZkP-_ocA",
+  "Reference": "4fDvIQNA40qlErr7DuMMoA/YrBWJS-BCkW89YZkP-_ocA",
+  "ParentRef": "4fDvIQNA40qlErr7DuMMoA/7PcvrTLG60eYow-95C2zag",
+  "Created": "2026-07-02T13:00:58.3854619Z",
+  "Updated": "2026-07-02T13:00:58.3854619Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.28.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

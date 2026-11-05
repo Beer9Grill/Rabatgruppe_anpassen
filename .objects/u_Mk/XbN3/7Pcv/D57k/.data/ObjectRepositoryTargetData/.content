@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="0agYYIyNV0CpfyQlU7ymCA" Reference="4fDvIQNA40qlErr7DuMMoA/D57k6BuBwU2WfvuqpuTmvQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1, 1, 190, 13" ElementType="ListItem" ElementVisibilityArgument="Interactive" FullSelectorArgument="[&quot;&lt;ctrl name='Fabrikatkz:' role='list' /&gt;&lt;ctrl name='&quot;+curMarke.ToString+&quot;*' role='list item' /&gt;&quot;]" Guid="0e1bc783-75b3-4557-9463-58ca4da7d302" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="63f3c92d778bf2c5515ce046218d590b.jpg" xmlns="">0kmbYrO-PVkyTK9dP6baUaA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

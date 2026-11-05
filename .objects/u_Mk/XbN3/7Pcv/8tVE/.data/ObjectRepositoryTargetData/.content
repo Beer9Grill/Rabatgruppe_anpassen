@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MFBra7IbRUmxKMxgAJrKXw" Reference="4fDvIQNA40qlErr7DuMMoA/8tVEr2tFekmaOIRgVUGFbA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="163, 174, 72, 23" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd ctrlid='1121' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="d7ddbe50-c433-4c8a-b7bc-e3a6161818a1" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='twe.exe' cls='#32770' title='Rabatttypsteuerung' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="34, 179, 126, 16" ElementType="Text" FuzzySelectorArgument="&lt;wnd ctrlid='1120' title='Aufschlagsatz:' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='Aufschlagsatz:' /&gt;" Guid="8583edd8-d667-4bef-92c4-51ad01f14a36" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="820e38cea7dcd5774199d1ef115500fa.jpg" xmlns="">0m30Fb-GXyk6r1Me1Amvcyg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
